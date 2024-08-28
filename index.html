@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Staff Roles and Promotion Paths</title>
+    <meta name="description"
+        content="Explore detailed descriptions of staff roles and promotion paths within our community. Learn the responsibilities, requirements, and privileges at each level from Helper to Admin, and discover the next steps for advancing your role.">       
+</head>
+
+<body>
+
+    
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="toggleNavbar()">           
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-title" style="justify-content: center;">Staff Details</div>
+        <div class="navbar-links">
+            <a href="#helper" onclick="navigateToSection(event, 'helper')">Helper</a>
+            <a href="#staff" onclick="navigateToSection(event, 'staff')">Staff</a>
+            <a href="#head-staff" onclick="navigateToSection(event, 'head-staff')">Head Staff</a>
+            <a href="#supervisor" onclick="navigateToSection(event, 'supervisor')">Supervisor</a>
+            <a href="#moderator" onclick="navigateToSection(event, 'moderator')">Moderator</a>
+            <a href="#head-moderator" onclick="navigateToSection(event, 'head-moderator')">Head Moderator</a>
+            <a href="#admin" onclick="navigateToSection(event, 'admin')">Admin</a>
+        </div>
+        <button class="apply-button" onclick="window.location = 'https:forms.gle/AyWQmckEDe9k2EUP7'">Apply Now</button>
+    </div>
+    <div class="container">
+        <h1>Staff Roles and Promotion Paths</h1>
+
+        <div id="helper" class="role">
+            <h2>1. Helper</h2>
+            <p><strong>Responsibilities:</strong> Assist new members, monitor chat, participate in events.</p>
+            <p><strong>Requirements:</strong> 1 month of active participation, helpful behavior, basic rule knowledge.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to issue warnings.</p>
+            <p class="next-step">Next Step: Promotion to Staff.</p>
+        </div>
+
+        <div id="staff" class="role">
+            <h2>2. Staff</h2>
+            <p><strong>Responsibilities:</strong> Support Helpers, handle minor infractions, help organize events.</p>
+            <p><strong>Requirements:</strong> 1 month as Helper, good rule knowledge, minor dispute handling, recommendation from a Moderator or higher.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to mute members temporarily.</p>
+            <p class="next-step">Next Step: Promotion to Head Staff.</p>
+        </div>
+
+        <div id="head-staff" class="role">
+            <h2>3. Head Staff</h2>
+            <p><strong>Responsibilities:</strong> Oversee and support Staff, assist in organizing larger events, ensure Staff duties are performed effectively.</p>
+            <p><strong>Requirements:</strong> 2 months as Staff, excellent performance, strong leadership skills, recommendation from a Supervisor or higher.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to issue more significant warnings and mutes.</p>
+            <p class="next-step">Next Step: Promotion to Supervisor.</p>
+        </div>
+
+        <div id="supervisor" class="role">
+            <h2>4. Supervisor</h2>
+            <p><strong>Responsibilities:</strong> Supervise all Helpers and Staff, handle more significant infractions, organize and lead events.</p>
+            <p><strong>Requirements:</strong> 2 months as Head Staff, proven leadership, comprehensive rule knowledge, recommendation from a Moderator or higher.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to mute and kick members.</p>
+            <p class="next-step">Next Step: Promotion to Moderator.</p>
+        </div>
+
+        <div id="moderator" class="role">
+            <h2>5. Moderator</h2>
+            <p><strong>Responsibilities:</strong> Enforce rules, resolve serious issues, mentor Helpers, Staff, and Head Staff, assist in large events.</p>
+            <p><strong>Requirements:</strong> 2 months as Supervisor, strong conflict resolution, comprehensive rule knowledge, recommendation from Head Mod or another Moderator.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to mute and kick members, initiate temporary bans.</p>
+            <p class="next-step">Next Step: Promotion to Head Mod.</p>
+        </div>
+
+        <div id="head-moderator" class="role">
+            <h2>6. Head Moderator</h2>
+            <p><strong>Responsibilities:</strong> Oversee all staff, develop policies, lead major projects, handle serious disputes.</p>
+            <p><strong>Requirements:</strong> 6 months as Mod, exceptional leadership, proven project leadership, unanimous Admin approval.</p>
+            <p class="privileges"><strong>Privileges:</strong> Ability to mute, kick, and ban members, high-level decision-making authority.</p>
+            <p class="next-step">Next Step: Special appointment to Admin.</p>
+        </div>
+
+        <div id="admin" class="role">
+            <h2>7. Admin (Highest Staff Role)</h2>
+            <p><strong>Responsibilities:</strong> Strategic direction, foster growth, mentor senior staff, executive decision-making.</p>
+            <p><strong>Requirements:</strong> Appointment only, must have served as Head Mod, exceptional contributions, limited to three Admins.</p>
+            <p class="privileges"><strong>Privileges:</strong> Full administrative rights, authority to appoint/remove staff.</p>
+            <p class="next-step">Next Step: None, highest staff role.</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>Made By Grafals</p>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

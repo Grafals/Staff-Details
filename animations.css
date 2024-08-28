@@ -1,0 +1,37 @@
+/* Navbar Toggle Button Animation */
+.navbar .navbar-toggle {
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* Smooth Section Entry */
+.role {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.role.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply Button Hover Effect */
+.apply-button:hover {
+    background-color: #ff0;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Animated Navbar Links */
+.navbar .navbar-links {
+    transition: transform 0.4s ease;
+    transform: translateX(-100%);
+}
+
+.navbar .navbar-links.active {
+    transform: translateX(0);
+}

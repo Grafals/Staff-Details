@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Website</title>
+    <style>
+        /* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 15px;
+    background-color: #444;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Content Styling */
+.content {
+    padding: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#themeLabel {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Dark Theme Navbar */
+.dark-theme .navbar {
+    background-color: #111;
+}
+
+    </style>
+</head>
+<body class="light-theme">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Staff Details</h1>
+        <button onclick="openThemeModal()">Choose Theme</button>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Staff Roles and Promotion Paths</h2>
+        <p>This is some content on the page.</p>
+    </div>
+
+    <!-- Theme Modal -->
+    <div id="themeModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Theme</h2>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+            <div id="themeLabel">Light Theme</div>
+            <div class="modal-footer">
+                <button id="confirmButton" onclick="confirmTheme()">Confirm</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the theme modal
+function openThemeModal() {
+    document.getElementById('themeModal').style.display = 'flex';
+}
+
+// Function to close the theme modal
+function closeModal() {
+    document.getElementById('themeModal').style.display = 'none';
+}
+
+// Update theme label based on slider position
+document.getElementById('themeToggle').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('themeLabel').textContent = 'Dark Theme';
+    } else {
+        document.getElementById('themeLabel').textContent = 'Light Theme';
+    }
+});
+
+// Function to confirm theme selection
+function confirmTheme() {
+    const isDarkTheme = document.getElementById('themeToggle').checked;
+    if (isDarkTheme) {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+    } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+    }
+    closeModal();
+}
+
+    </script>
+</body>
+</html>
